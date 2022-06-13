@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Electronicos</string>
+    <string name="tv_correo">Correo Electrónico</string>
+    <string name="tv_clave">Contraseña</string>
+</resources>
