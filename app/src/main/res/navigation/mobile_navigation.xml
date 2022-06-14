@@ -3,13 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_electronico">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.electronicos.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_electronico"
+        android:name="com.electronicos.ui.electronico.ElectronicoFragment"
+        android:label="@string/menu_electronico"
+        tools:layout="@layout/fragment_electronico" >
+        <action
+            android:id="@+id/action_nav_electronico_to_addElectronicoFragment"
+            app:destination="@id/addElectronicoFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -22,4 +26,13 @@
         android:name="com.electronicos.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/addElectronicoFragment"
+        android:name="com.electronicos.ui.electronico.AddElectronicoFragment"
+        android:label="fragment_add_electronico"
+        tools:layout="@layout/fragment_add_electronico" >
+        <action
+            android:id="@+id/action_addElectronicoFragment_to_nav_electronico"
+            app:destination="@id/nav_electronico" />
+    </fragment>
 </navigation>
